@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Latar Belakang Kotak Melengkung (Warna Tema Biru) -->
+  <rect width="512" height="512" rx="128" fill="#0d6efd" />
+  
+  <!-- Ikon Pin Lokasi (Putih) -->
+  <path d="M256 80c-70.7 0-128 57.3-128 128 0 98.7 128 234.7 128 234.7s128-136 128-234.7c0-70.7-57.3-128-128-128z" fill="#ffffff" />
+  
+  <!-- Ikon Centang (Biru) -->
+  <path d="M216 288l-56-56 22.6-22.6 33.4 33.4 89.4-89.4 22.6 22.6-112 112z" fill="#0d6efd" />
+</svg>

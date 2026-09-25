@@ -256,3 +256,33 @@ window.onload = () => {
   startCamera();
   getLocation();
 };
+
+// Registrasi Service Worker untuk PWA
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('PWA Ready!'))
+        .catch((err) => console.log('PWA Error:', err));
+}
+
+// Logika Munculkan Tombol Install PWA
+let deferredPrompt;
+const btnInstall = document.getElementById('btn-install');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    
+    // Tampilkan tombol install jika elemennya ada
+    if (btnInstall) {
+        btnInstall.classList.remove('d-none');
+        btnInstall.addEventListener('click', () => {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User menginstall aplikasi');
+                }
+                deferredPrompt = null;
+            });
+        });
+    }
+});

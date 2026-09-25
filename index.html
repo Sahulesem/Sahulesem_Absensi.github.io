@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Absensi Kantor Desa Kamangta</title>
+    <!-- PWA Manifest & Theme -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d6efd">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icon -->
@@ -19,6 +22,11 @@
             <h5 class="mb-0 fw-bold"><i class="fa-solid fa-building-user me-2"></i>Absensi Kantor Desa Kamangta</h5>
             <small id="live-clock" class="text-white-50"></small>
         </div>
+
+        <div class="text-center mt-2">
+            <img src="icon-svg.svg" alt="" style="width: 150px; height: 150px;">
+        </div>
+       
         <div class="card-body p-4">
             
             <form id="absensi-form">
@@ -92,7 +100,14 @@
                 <button type="submit" id="btn-submit" class="btn btn-success w-100 py-2 fs-6 fw-bold" disabled>
                     <i class="fa-solid fa-paper-plane me-1"></i> Kirim Absensi
                 </button>
+                
             </form>
+
+             <!-- Tombol Install PWA (Opsional) -->
+<button type="button" id="btn-install" class="btn btn-outline-primary w-100 mt-5 d-none">
+    <i class="fa-solid fa-download me-1"></i> Install Aplikasi di HP
+</button>
+            
 
         </div>
     </div>
